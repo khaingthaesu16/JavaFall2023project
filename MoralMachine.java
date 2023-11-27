@@ -21,7 +21,7 @@ public class MoralMachine
 
     public static boolean decideSwerve(int scenario, String g1, String g2)
     {
-        boolean decision = false;
+        boolean decision = savingMoreLives(scenario, g1, g2);
 
         return decision;
     }
@@ -34,7 +34,7 @@ public class MoralMachine
         if (scenario < 11)
         //no legal complications
         {
-            result = groupSize( g1,  g2);
+            result = groupSize(g1, g2);
         }
         else if (scenario < 22)
         {
@@ -48,7 +48,7 @@ public class MoralMachine
         return result;
     }
     
- //for every scenerio
+   //for every scenerio
     public static boolean groupSize(String g1, String g2)
     {
       if(g1.length() > g2.length())
@@ -88,6 +88,7 @@ public class MoralMachine
          if ((g2Animal =='s' )|| (g2Animal =='t'))
          g2Animalcount ++;
       }
+   
 
       if (g1Animalcount>g2Animalcount)
       {
